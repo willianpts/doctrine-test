@@ -1,11 +1,11 @@
-Doctrine 2.4 bug
+Doctrine 2.4.6 update problem
 -----------
 
 Maybe I have stumbled into a strange problem.
 This repo may be used to reproduce it.
 
-### Database setup
-
+#### Database setup
+Please insert your connection settings at [em.php](em.php) then create the tables:
 ```sql
 USE test;
 
@@ -38,7 +38,7 @@ INSERT INTO `orgs` VALUES (1,1,'Company 1');
 INSERT INTO `admins` VALUES (1,1,1,'2014-10-01 00:00:00'),(2,1,2,'2014-10-23 00:00:00');
 ```
 
-### Running
+#### Running
 
 ```
 composer install
@@ -47,5 +47,4 @@ php index.php
 After running index.php you'll see that Doctrine hasnt updated the database records.
 
 Now if we comment line 56 of [Organization.php](src/Entities/Organization.php) the UPDATE executes correctly.
-
 
