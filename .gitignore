@@ -1,0 +1,7 @@
+*.sublime-project
+*.sublime-workspace
+composer.lock
+composer.phar
+vendor/
+/nbproject/private/
+/tmp
